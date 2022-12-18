@@ -3,7 +3,7 @@ package com.example.DiningReview.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "USER")
+@Table(name = "SERVICE_USER")
 public class User {
     @Id
     @GeneratedValue
@@ -23,7 +23,7 @@ public class User {
     @Column(name = "DAIRY_ALLERGY")
     private Boolean intrestedInDairy;
 
-    public User(User user){
+    public User(User user) {
         this.username = user.getUsername();
         this.city = user.getCity();
         this.state = user.getState();
@@ -42,31 +42,59 @@ public class User {
     }
 
 
-    public String getUsername(){return username; }
+    public String getUsername() {
+        return username;
+    }
 
-    public void setUsername(String username){this.username = username; }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-    public String getCity(){return city; }
+    public String getCity() {
+        return city;
+    }
 
-    public void setCity(String city){this.city = city; }
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-    public String getState(){return state; }
+    public String getState() {
+        return state;
+    }
 
-    public void setState(String state){this.state = state; }
+    public void setState(String state) {
+        this.state = state;
+    }
 
-    public Integer getZipcode(){return zipcode; }
+    public Integer getZipcode() {
+        return zipcode;
+    }
 
-    public void setZipcode(Integer zipcode){this.zipcode = zipcode; }
+    public void setZipcode(Integer zipcode) {
+        this.zipcode = zipcode;
+    }
 
-    public Boolean getIntrestedInPeanut(){return intrestedInPeanut; }
+    public Boolean getIntrestedInPeanut() {
+        return intrestedInPeanut;
+    }
 
-    public void setIntrestedInPeanut(Boolean intrestedInPeanut){this.intrestedInPeanut = intrestedInPeanut; }
+    public void setIntrestedInPeanut(Boolean intrestedInPeanut) {
+        this.intrestedInPeanut = intrestedInPeanut;
+    }
 
-    public Boolean getIntrestedInEgg() {return intrestedInEgg; }
+    public Boolean getIntrestedInEgg() {
+        return intrestedInEgg;
+    }
 
-    public void setIntrestedInEgg(Boolean intrestedInEgg){this.intrestedInEgg = intrestedInEgg; }
+    public void setIntrestedInEgg(Boolean intrestedInEgg) {
+        this.intrestedInEgg = intrestedInEgg;
+    }
 
-    public Boolean getIntrestedInDairy() {return intrestedInDairy; }
+    public Boolean getIntrestedInDairy() {
+        return intrestedInDairy;
+    }
 
-    public void setIntrestedInDairy(Boolean intrestedInDairy) {this.intrestedInDairy = intrestedInDairy; }
+    public void setIntrestedInDairy(Boolean intrestedInDairy) {
+        this.intrestedInDairy = intrestedInDairy;
+    }
 }
