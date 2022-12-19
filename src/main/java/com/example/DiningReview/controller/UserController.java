@@ -38,9 +38,9 @@ public class UserController {
         user.setCity(userEdited.getCity());
         user.setState(userEdited.getState());
         user.setZipcode(userEdited.getZipcode());
-        user.setIntrestedInDairy(userEdited.getIntrestedInDairy());
-        user.setIntrestedInEgg(userEdited.getIntrestedInEgg());
-        user.setIntrestedInPeanut(userEdited.getIntrestedInPeanut());
+        user.setInterestedInDairy(userEdited.getInterestedInDairy());
+        user.setInterestedInEgg(userEdited.getInterestedInEgg());
+        user.setInterestedInPeanut(userEdited.getInterestedInPeanut());
 
         return userRepository.save(user);
     }

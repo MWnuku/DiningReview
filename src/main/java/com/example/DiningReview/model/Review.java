@@ -10,6 +10,9 @@ public class Review {
     private Long id;
     @Column(name = "USERNAME")
     private String username;
+
+    @Column(name = "USER_ID")
+    private Long userId;
     @Column(name = "RESTAURANT_ID")
     private Long restaurantId;
     @Column(name = "PEANUT_SCORE")
@@ -26,6 +29,8 @@ public class Review {
 
     public Review(Review review){
         this.username = review.getUsername();
+
+        this.userId = review.getUserId();
 
         this.restaurantId = review.getRestaurantId();
 
@@ -71,4 +76,8 @@ public class Review {
     public ReviewStatus getStatus(){return status; }
 
     public void setStatus(ReviewStatus status){this.status = status;}
+
+    public Long getUserId(){return userId; }
+
+    public void setUserId(Long userId){this.userId = userId; }
 }

@@ -17,20 +17,20 @@ public class User {
     @Column(name = "ZIPCODE")
     private Integer zipcode;
     @Column(name = "PEANUT_ALLERGY")
-    private Boolean intrestedInPeanut;
+    private Boolean interestedInPeanut;
     @Column(name = "EGG_ALLERGY")
-    private Boolean intrestedInEgg;
+    private Boolean interestedInEgg;
     @Column(name = "DAIRY_ALLERGY")
-    private Boolean intrestedInDairy;
+    private Boolean interestedInDairy;
 
     public User(User user) {
         this.username = user.getUsername();
         this.city = user.getCity();
         this.state = user.getState();
         this.zipcode = user.getZipcode();
-        this.intrestedInPeanut = user.getIntrestedInPeanut();
-        this.intrestedInEgg = user.getIntrestedInEgg();
-        this.intrestedInDairy = user.getIntrestedInDairy();
+        this.interestedInPeanut = user.getInterestedInPeanut();
+        this.interestedInEgg = user.getInterestedInEgg();
+        this.interestedInDairy = user.getInterestedInDairy();
     }
 
     public User(String username) {
@@ -74,27 +74,27 @@ public class User {
         this.zipcode = zipcode;
     }
 
-    public Boolean getIntrestedInPeanut() {
-        return intrestedInPeanut;
+    public Boolean getInterestedInPeanut() {
+        return interestedInPeanut;
     }
 
-    public void setIntrestedInPeanut(Boolean intrestedInPeanut) {
-        this.intrestedInPeanut = intrestedInPeanut;
+    public void setInterestedInPeanut(Boolean interestedInPeanut) {
+        this.interestedInPeanut = interestedInPeanut;
     }
 
-    public Boolean getIntrestedInEgg() {
-        return intrestedInEgg;
+    public Boolean getInterestedInEgg() {
+        return interestedInEgg;
     }
 
-    public void setIntrestedInEgg(Boolean intrestedInEgg) {
-        this.intrestedInEgg = intrestedInEgg;
+    public void setInterestedInEgg(Boolean interestedInEgg) {
+        this.interestedInEgg = interestedInEgg;
     }
 
-    public Boolean getIntrestedInDairy() {
-        return intrestedInDairy;
+    public Boolean getInterestedInDairy() {
+        return interestedInDairy;
     }
 
-    public void setIntrestedInDairy(Boolean intrestedInDairy) {
-        this.intrestedInDairy = intrestedInDairy;
+    public void setInterestedInDairy(Boolean interestedInDairy) {
+        this.interestedInDairy = interestedInDairy;
     }
 }
