@@ -63,7 +63,6 @@ public class UserController {
 
     @GetMapping("/all")
     public List<User> getAllUser() {
-        userRepository.save(new User("John"));
         return userRepository.findAll();
     }
 }
