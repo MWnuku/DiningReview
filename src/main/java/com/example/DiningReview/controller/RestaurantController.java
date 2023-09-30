@@ -1,18 +1,15 @@
 package com.example.DiningReview.controller;
 
-import com.example.DiningReview.DiningReviewApplication;
-import com.example.DiningReview.model.*;
-import com.example.DiningReview.repository.ReviewRepository;
+import com.example.DiningReview.model.Restaurant;
 import com.example.DiningReview.repository.RestaurantRepository;
+import com.example.DiningReview.repository.ReviewRepository;
 import com.example.DiningReview.repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/restaurant")
@@ -20,14 +17,8 @@ public class RestaurantController {
 
     private final RestaurantRepository restaurantRepository;
 
-    private final UserRepository userRepository;
-
-    private final ReviewRepository reviewRepository;
-
-    public RestaurantController(RestaurantRepository restaurantRepository, UserRepository userRepository, ReviewRepository reviewRepository){
+    public RestaurantController(RestaurantRepository restaurantRepository){
         this.restaurantRepository = restaurantRepository;
-        this.reviewRepository = reviewRepository;
-        this.userRepository = userRepository;
     }
 
     @PostMapping("/add")

@@ -1,18 +1,15 @@
 package com.example.DiningReview.controller;
 
-import com.example.DiningReview.DiningReviewApplication;
-import com.example.DiningReview.model.*;
-import com.example.DiningReview.repository.ReviewRepository;
+import com.example.DiningReview.model.Review;
+import com.example.DiningReview.model.ReviewStatus;
 import com.example.DiningReview.repository.RestaurantRepository;
+import com.example.DiningReview.repository.ReviewRepository;
 import com.example.DiningReview.repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.List;
-import java.util.ArrayList;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/review")
@@ -48,7 +45,7 @@ public class DiningReviewController {
     @PutMapping("/{id}/approve")
     public Review approveReview(@PathVariable("id") Long id){
         Optional<Review> optReview = reviewRepository.findById(id);
-        if(!optReview.isPresent())
+        if(optReview.isEmpty())
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "This review doesn't exist");
         Review reviewToApprove = optReview.get();
         reviewToApprove.setStatus(ReviewStatus.Accpeted);

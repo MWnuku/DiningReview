@@ -1,5 +1,6 @@
 package com.example.DiningReview.model;
 
+import lombok.Getter;
 
 import javax.persistence.*;
 
@@ -9,14 +10,19 @@ public class Restaurant {
     @Id
     @GeneratedValue
     private Long id;
+    @Getter
     @Column(name = "NAME")
     private String name;
+    @Getter
     @Column(name = "PEANUT_SCORE")
     private Integer peanut;
+    @Getter
     @Column(name = "EGG_SCORE")
     private Integer egg;
+    @Getter
     @Column(name = "DAIRY_SCORE")
     private Integer dairy;
+    @Getter
     @Column(name = "ZIPCODE")
     private Integer zipcode;
 
@@ -32,30 +38,27 @@ public class Restaurant {
         this.peanut = peanut;
         this.egg = egg;
         this.dairy = dairy;
+    }
+
+    public Restaurant(){}
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setPeanut(Integer peanut){
+        this.peanut = peanut;
+    }
+
+    public void setEgg(Integer egg){
+        this.egg = egg;
+    }
+
+    public void setDairy(Integer dairy){
+        this.dairy = dairy;
+    }
+
+    public void setZipcode(Integer zipcode){
         this.zipcode = zipcode;
     }
-
-    public Restaurant() {
-
-    }
-
-    public String getName() {return name; }
-
-    public void setName(String name) {this.name = name; }
-
-    public Integer getPeanut() {return peanut; }
-
-    public void setPeanut(Integer peanut) {this.peanut = peanut; }
-
-    public Integer getEgg() {return egg; }
-
-    public void setEgg(Integer egg) {this.egg = egg; }
-
-    public Integer getDairy() {return dairy; }
-
-    public void setDairy(Integer dairy) {this.dairy = dairy; }
-
-    public Integer getZipcode(){return zipcode; }
-
-    public void setZipcode(Integer zipcode) {this.zipcode = zipcode; }
 }

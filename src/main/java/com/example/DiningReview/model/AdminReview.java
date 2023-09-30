@@ -1,5 +1,8 @@
 package com.example.DiningReview.model;
 
+import lombok.Getter;
+
+@Getter
 public class AdminReview {
     private Boolean approval;
 
@@ -7,7 +10,7 @@ public class AdminReview {
         this.approval = adminReview.getApproval();
     }
 
-    public Boolean getApproval(){return this.approval; }
-
-    public void setApproval(Boolean aproval){this.approval = approval; }
+    public void setApproval(Boolean aproval){
+        this.approval = approval;
+    }
 }

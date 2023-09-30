@@ -1,4 +1,5 @@
 package com.example.DiningReview.model;
 
-public enum ReviewStatus { Unsubmitted, Submitted, Pending, Accpeted, Declined
+public enum ReviewStatus {
+    Unsubmitted, Submitted, Pending, Accpeted, Declined
 }
